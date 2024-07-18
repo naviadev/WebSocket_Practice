@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Socket.io Client</title>
   </head>
   <body>
-    <h1>Hello Socket.io</h1>
+    <input type="text" id="messageInput" />
+    <button type="button" id="submit">Send</button>
+    <ul id="messages"></ul>
   </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./test.js"></script>
 </html>
