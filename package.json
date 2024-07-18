@@ -8,6 +8,10 @@
     "server": "node ./dist/src/app.js"
   },
   "keywords": [],
+  "workspaces":[
+    "client",
+    "server"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
