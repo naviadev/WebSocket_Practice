@@ -6,6 +6,7 @@ import path from 'path';
 const app = express();
 const server = createServer(app);
 const io = new SocketIOServer(server);
+// app.use(express.static(path.join(process.cwd(), './client')));
 
 
 io.on('connection', (socket) => {
@@ -21,10 +22,11 @@ io.on('connection', (socket) => {
   });
 
 });
-app.use(express.static(path.join(process.cwd(), './client')));
+
+app.use(express.static(path.join(process.cwd(), './client/dist')));
 
 app.get('/', (req, res) => {
-  res.sendFile(process.cwd() + "/client/index.html");
+  res.sendFile(process.cwd() + "/client/dist/index.html");
 });
 
 server.listen(3000, () => { console.log('http://localhost:3000') })
