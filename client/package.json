@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "babel": "npx babel src --out-dir dist --extensions .ts",
-    "webpack": "npx webpack --config webpack.config.js"
+    "webpack": "npx webpack --config webpack.config.js", 
+    "start" : ""
   },
   "keywords": [],
   "author": "",

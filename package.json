@@ -5,20 +5,24 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node ./server/dist/app.js"
+    "server": "node ./server/dist/app.js",
+    "start": "npm run start -workspaces",
+    "build": "npm run build -workspaces=server"
   },
   "keywords": [],
-  "workspaces":[
+  "workspaces": [
     "client",
     "server"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express-session": "^1.18.0",
     "socket.io": "^4.7.5",
-  "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
+    "@types/express-session": "^1.18.0",
     "@types/socket.io-client": "^3.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
